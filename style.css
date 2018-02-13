@@ -16,6 +16,8 @@ html, body {
 body {
   color: #FFFFFF;
   background: #222327;
+  min-width: 320px;
+  position: relative;
 }
 
 .splash {
@@ -97,10 +99,21 @@ body {
   color: inherit;
 }
 
+.menu-icon {
+  top: 15px;
+  left: 5%;
+  position: absolute;
+  display: none;
+}
+
+.menu-icon:hover {
+  cursor: pointer;
+}
+
 .splash-text {
   position: relative;
   text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
-  margin-top: 10%;
+  margin: 10% 15px 0 15px;
   text-align: center;
   color: #FFFFFF;
 }
@@ -125,7 +138,8 @@ body {
 .inline-splash-item-container {
   width: 50%;
   height: 100%;
-  display: inline-block;
+  float: left;
+  display: block;
   overflow: hidden;
 }
 
@@ -216,11 +230,17 @@ body {
   border-left: 5px solid #BD836D;
   font-family: roboto-regular, sans-serif;
   font-size: 20px;
+}
+
+.story-container-description-column {
+  display: block;
+  float: left;
+  width: 50%;
   table-layout: fixed;
 }
 
 .story-container-description-cell {
-  width: 2%;
+  /* width: 2%; */
   padding-left: 5%;
   padding-bottom: 2%;
   line-height: 1.5em;
@@ -228,6 +248,7 @@ body {
 
 .social-media-container {
   height: 300px;
+  width: 100%;
   overflow: hidden;
   font-size: 0;
 }
@@ -235,7 +256,8 @@ body {
 .social-media-item-container {
   width: 25%;
   height: 100%;
-  display: inline-block;
+  display: block;
+  float: left;
   overflow: hidden;
 }
 
@@ -351,34 +373,103 @@ body {
   width: 250px;
 }
 
-.mailing-list-form-container > label {
-
-}
-
 .footer {
   height: 80px;
   width: 100%;
   color: #6F717C;
   font-size: 0;
   font-family: roboto-regular, sans-serif;
-  display: table;
 }
 
 .footer-block-container {
   width: 33.33%;
-  display: table-cell;
-  vertical-align: middle;
+  height: 100%;
+  display: table;
   text-align: center;
+  float: left;
 }
 
 .footer-text-container {
+  display: table-cell;
+  vertical-align: middle;
   font-size: 16px;
+}
+
+@media (max-width: 800px) {
+  .inline-splash-item-container {
+    width: auto;
+    height: 50%;
+    float: none;
+  }
+
+  .social-media-container {
+    height: auto;
+  }
+
+  .social-media-item-container {
+    width: auto;
+    height: 200px;
+    float: none;
+  }
+
+  .logo {
+    height: 50px;
+  }
+
+  .nav-left, .nav-right {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .story-title {
+    font-size: 30px;
+  }
+
+  .story-logo {
+    height: 80px;
+    left: -56px;
+    top: -33px;
+  }
+
+  .story-container-description {
+    font-size: 16px;
+  }
+
+  .story-container-description-column {
+    width: auto;
+    height: 50%;
+    float: none;
+  }
+
+  .mailing-list-form-container > h1 {
+    font-size: 30px;
+    line-height: 1.5em;
+  }
+
+  .mailing-list-form-container > p {
+    font-size: 20px;
+    line-height: 1.5em;
+    margin: 20px 0;
+  }
+
+  .footer {
+    height: auto;
+  }
+
+  .footer-block-container {
+    width: 100%;
+    height: 50px;
+    float: none;
+  }
 }
 
 @media (max-width: 1200px) {
   .splash {
     height: 300px;
-    padding-top: 8%;
+    padding-top: 150px;
   }
 
   .splash-text > h1 {
@@ -388,4 +479,25 @@ body {
   .splash-text > p {
     font-size: 25px;
   }
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+html[xmlns] .clearfix {
+    display: block;
+}
+
+* html .clearfix {
+    height: 1%;
 }
