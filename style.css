@@ -21,7 +21,7 @@ body {
 }
 
 .splash {
-  background-image: url("./media/images/header.png");
+  background-image: url("./media/images/img.png");
   position: relative;
   overflow: auto;
   height: 500px;
@@ -47,9 +47,9 @@ body {
   transition: opacity .4s;
 }
 
-.splash-mask:hover {
+/* .splash-mask:hover {
   opacity: 0;
-}
+} */
 
 .header {
   width: 100%;
@@ -116,6 +116,7 @@ body {
   margin: 10% 15px 0 15px;
   text-align: center;
   color: #FFFFFF;
+  z-index: 10;
 }
 
 .splash-text > h1 {
@@ -158,11 +159,11 @@ body {
 }
 
 .inline-splash-left {
-  background-image: url("./media/images/inline-splash-left.png");
+  background-image: url("./media/images/inline-splash-left-min.png");
 }
 
 .inline-splash-right {
-  background-image: url("./media/images/inline-splash-right.png");
+  background-image: url("./media/images/inline-splash-right-min.png");
 }
 
 .inline-splash-mask {
@@ -309,7 +310,7 @@ body {
 }
 
 #facebook {
-  background-image: url("./media/images/facebook.png");
+  background-image: url("./media/images/facebook-min.png");
 }
 
 #facebook > .social-media-logo-container > .social-media-logo {
@@ -317,7 +318,7 @@ body {
 }
 
 #instagram {
-  background-image: url("./media/images/instagram.png");
+  background-image: url("./media/images/instagram-min.png");
 }
 
 #instagram > .social-media-logo-container > .social-media-logo {
